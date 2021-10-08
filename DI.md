@@ -15,6 +15,8 @@ First project was to properly document DI. It's fairly different from how it wor
 
 tl;dr its weird, but all you need to do to get proper DI is hold left/right/up/down depending on the move
 
+To make the above perfectly clear, you absolutely CAN still hold a diagonal, it just doesn't actually do anything different than holding the proper cardinal.
+
 
 * First, we figure out whether we're going to apply horizontal or vertical DI.
 * If the move specifies one, we're done with this step. If it specifies `Any`, we need to do some work:
