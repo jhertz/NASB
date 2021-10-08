@@ -7,8 +7,8 @@ First project was to properly document DI. It's fairly different from how it wor
 
 ## The Basics
 
-* There are only two possible DI's off a given move: `diIn` and `diOut`. 
-* Each move has its own values for `diIn` and `diOut` (default is 10 for both). They do not have to be the same!
+* There are only two possible DI's off a given move: `diIn` and `diOut` (these determine how much to rotate your trajectory by). 
+* Each move has its own values for `diIn` and `diOut` (default is 10 deg for both). They do not have to be the same!
 * Each move has a property for how it can be DI'd: `Horizontal`, `Vertical`, or `Any` (more on that later)
 
 ## The implementation
@@ -48,7 +48,9 @@ I *think* the reason we scale by 1.5 is gravity (the theory launch angle is diff
 Still with me? Great! Now that we've figured out the DI mode, we can actually calculate the DI. 
 
 I'm not sure the best way to visualize this, so instead I'm just going to annotate the code.
-Here's a big ugly blob of C#. Luckily for you, I've cleaned it up a bit and commented it:
+Here's a big ugly blob of C#. Luckily for you, I've cleaned it up a bit and commented it!
+
+Again, the value returned is the angle that we'll end up rotating by.
 
 ```C#
 		case AtkProp.DIType.Horizontal:
@@ -189,6 +191,8 @@ I'm honestly not sure the best way to present the above data. If someone wants t
 ## Implications/Conclusions
 
 * Since the game is digital, DI is much simpler. You only have 8 angles to start with, and the game simplifies this for DI.
+* The game thinks of things as either needing to be DI’d horizontally or vertically.
+* It checks whether you are holding left/right or up/down (depending on whether its in vertical or horizontal mode), and uses that to give you either in or out DI.
 * Specifically, all you need to do to get correct DI is to input either left, right, up, or down.
 * You *never* need to input a diagonal direction to get proper DI.
 * Whether you get in/out DI is dependent on a number of non-trivial factors including how the move's knockback is distributed between the X and Y axis, as well as (sometimes) what direction you are facing. 
