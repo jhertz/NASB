@@ -185,10 +185,23 @@ Again, the value returned is the angle that we'll end up rotating by.
 
 ## A better way to understand this
 
-TBD
+Thanks to [PTas](https://twitter.com/PracticalTAS), we have a nice way to visualize the above labyrinth of if statements. 
 
-I'm honestly not sure the best way to present the above data. If someone wants to make a flowchart or something, that would be awesome.
+We can simplify this maze down to 4 different DI types:
 
+![](https://pbs.twimg.com/media/FBYrcqJWEAIF1yi?format=png&name=small)
+![](https://pbs.twimg.com/media/FBYrdKRWEAAsVFG?format=png&name=small)
+![](https://pbs.twimg.com/media/FBYrdynXMAYJvPK?format=png&name=small)
+![](https://pbs.twimg.com/media/FBYreUqXoAA1Nwf?format=png&name=small)
+
+## Cutoff Angle
+We can also use calculate the angle that switches from horizontal to vertical priority. Recall the code was
+
+```C#
+dIType = ((Mathf.Abs(launchDir.x) * 1.5f > Mathf.Abs(launchDir.y)) ? AtkProp.DIType.Vertical : AtkProp.DIType.Horizontal);
+```
+
+We can think of this as a right triangle with one side of length 2, and another of length 3. Applying [a little trig](https://www.calculator.net/right-triangle-calculator.html?av=3&alphav=&alphaunit=d&bv=2&betav=&betaunit=d&cv=&hv=&areav=&perimeterv=&x=79&y=23), we get a cutoff angle of 56.31°
 
 ## Implications/Conclusions
 
