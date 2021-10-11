@@ -187,7 +187,7 @@ Again, the value returned is the angle that we'll end up rotating by.
 
 Thanks to [PTas](https://twitter.com/PracticalTAS), we have a nice way to visualize the above labyrinth of if statements. 
 
-We can simplify this maze down to 4 different DI types:
+We can simplify this maze down to 4 different DI types. In each, we'll visualize in and out as purple and blue. Purple *should* represent in and blue out in all cases except Vertical Only, where the game actually defines in/out by the direction of the defender:
 
 ![](https://pbs.twimg.com/media/FBYrcqJWEAIF1yi?format=png&name=small)
 ![](https://pbs.twimg.com/media/FBYrdKRWEAAsVFG?format=png&name=small)
