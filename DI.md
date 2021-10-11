@@ -197,7 +197,7 @@ I'm honestly not sure the best way to present the above data. If someone wants t
 * It checks whether you are holding left/right or up/down (depending on whether its in vertical or horizontal mode), and uses that to give you either in or out DI.
 * Specifically, all you need to do to get correct DI is to input either left, right, up, or down.
 * You never *need* to input a diagonal direction to get proper DI (but using a diagonal may be optimal as it can OS between vertical and horizontal modes).
-* Whether you get in/out DI is dependent on a number of non-trivial factors including how the move's knockback is distributed between the X and Y axis, as well as (sometimes) what direction you are facing. 
+* Whether you get in/out DI is dependent on a number of factors, mostly the move's launch angle, as well as (sometimes) what direction you are facing. 
 
 
 
