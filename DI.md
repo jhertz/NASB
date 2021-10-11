@@ -189,13 +189,9 @@ Thanks to [PTas](https://twitter.com/PracticalTAS), we have a nice way to visual
 
 We can simplify this maze down to 4 different DI types:
 
-* Horizontal Only:
 ![](https://pbs.twimg.com/media/FBYrcqJWEAIF1yi?format=png&name=small)
-* Horizontal Priority
 ![](https://pbs.twimg.com/media/FBYrdKRWEAAsVFG?format=png&name=small)
-* Vertical Only
 ![](https://pbs.twimg.com/media/FBYrdynXMAYJvPK?format=png&name=small)
-* Vertical Priority
 ![](https://pbs.twimg.com/media/FBYreUqXoAA1Nwf?format=png&name=small)
 
 
