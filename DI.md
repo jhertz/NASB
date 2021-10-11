@@ -185,9 +185,18 @@ Again, the value returned is the angle that we'll end up rotating by.
 
 ## A better way to understand this
 
-TBD
+Thanks to [PTas](https://twitter.com/PracticalTAS), we have a nice way to visualize the above labyrinth of if statements. 
 
-I'm honestly not sure the best way to present the above data. If someone wants to make a flowchart or something, that would be awesome.
+We can simplify this maze down to 4 different DI types:
+
+* Horizontal Only:
+![](https://pbs.twimg.com/media/FBYrcqJWEAIF1yi?format=png&name=small)
+* Horizontal Priority
+![](https://pbs.twimg.com/media/FBYrdKRWEAAsVFG?format=png&name=small)
+* Vertical Only
+![](https://pbs.twimg.com/media/FBYrdynXMAYJvPK?format=png&name=small)
+* Vertical Priority
+![](https://pbs.twimg.com/media/FBYreUqXoAA1Nwf?format=png&name=small)
 
 
 ## Implications/Conclusions
