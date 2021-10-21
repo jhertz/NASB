@@ -30,7 +30,9 @@ dotnet tool install ilspycmd -g
 ### Decompile
 
 The majority of the code lives in `Nickelodeon All-Star Brawl_Data/Managed/Assembly-CSharp.dll`
+
 Run ilspy on it to disassemble it:
+
 ```
 ilspycmd Assembly-CSharp.dll > ~/dis/Assembly-CSharp.dll.cs
 ```
